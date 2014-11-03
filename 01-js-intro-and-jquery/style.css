@@ -1,0 +1,26 @@
+body {
+  background-color: #e2e0e0;
+}
+
+section {
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  text-align: center;
+}
+
+.container-msg {
+  margin-top: 1em;
+}
+
+.inputs {
+  margin: 2em 0em 0em 1em;
+}
+
+.twit-bar {
+  float: right;
+  margin-right: 2em;
+  width: 40%;
+
+  background-color: #6cbbda; 
+}
