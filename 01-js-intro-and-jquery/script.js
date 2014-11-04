@@ -10,9 +10,10 @@ var highlight = function() {
 };
 
 $(document).ready(function() {
-  $('section').fadeIn(3500);
-  $('#alias').focus();
-
+  $('section').fadeIn(3500, function() {
+  	$('#alias').focus();
+  });
+  
   var $msg = $('#msg');
 
   $('#btn').click(function() {
@@ -30,8 +31,8 @@ $(document).ready(function() {
   });
 
   $.ajax({
-  url: "http://localhost:3000/search?q=html5",
-  type: "get"
+  url: 'http://localhost:3000/search?q=html5',
+  type: 'get'
   }).success(function(data){
     console.log(data);
     $.each(data, function(data) {
