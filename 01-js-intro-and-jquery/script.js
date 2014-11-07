@@ -13,12 +13,11 @@ $(document).ready(function() {
   $('section').fadeIn(3500, function() {
   	$('#alias').focus();
   });
-  
+   
   var $msg = $('#msg');
 
   $('#btn').click(function() {
-
-  	$.ajax({
+  	$.ajax( {
   	  url: 'http://bootcamp.aws.af.cm/welcome/' + $('#alias').val(),
   	  type: 'get',
   	}).success(function(data) {
@@ -35,20 +34,25 @@ $(document).ready(function() {
   type: 'get'
   }).success(function(data){
     console.log(data);
-    $.each(data, function(data) {
-      $.each(this, function() {
-      	$('.twit-bar').append('<article>' + 
-		  '<img id="user-profile-img" src="' + this.user.profile_image_url + '" />' +
-    	  '<span id="created-at">' + this.created_at + '</span>' + '<br>' +
-    	  '<span id="user">' + this.user.name + '</span>' +
-    	  '<p id="cont-twit">' + this.text + '</p>' + '</article>');
-      });
+    $.each(data.statuses,function(i,val){
+      $('.twit-bar').append('<article>' +
+      '<img id="user-profile-img" src="' + val.user.profile_image_url + '" />' +
+      '<span id="created-at">' + val.created_at + '</span><br>' +
+      '<span id="user">' + val.user.name + '</span>' +
+      '<p id="cont-twit">' + val.text + '</p>' + '</article>');
     });
-  }).fail(function(){
-    alert('Failure to get request');
+  }).fail(function() {
+  	alert('Failure to get request');
   });
 });
 
+    /*$.each(data.statuses,function(i,val){
+      $('.twit-bar').append('<article>' +
+      '<img id="user-profile-img" src="' + this.user.profile_image_url + '" />' +
+      '<span id="created-at">' + this.created_at + '</span><br>' +
+      '<span id="user">' + this.user.name + '</span>' +
+      '<p id="cont-twit">' + this.text + '</p>' + '</article>');
+    });*/
 
 
 

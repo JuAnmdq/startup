@@ -1,0 +1,17 @@
+body {
+  margin-left: 2em;
+  
+  background-color: #e6edeb;
+}
+
+.cont-playback {
+  
+  width: 10em;
+  padding: 2em;
+  margin-bottom: 1em;
+
+  border-radius: 1em;
+
+  text-align: center;
+  background-color: #11d9e0;
+}
