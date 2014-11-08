@@ -16,7 +16,6 @@
 
   Movie.prototype.play = function play() {
      $.publish('play', this.get('title'));
-     console.log('Playing ' + this.get('title') + '...');
   };
 
   Movie.prototype.stop = function stop() {
@@ -57,24 +56,15 @@ Social.prototype = {
   }
 };
 
-//Tome esta función de Learning JavaSript Design Patterns
+  function extend(destination, source) {
+    for (var prop in source) {
+      if (source.hasOwnProperty(prop)) {
+        destination[prop] = source[prop];
+      }
+   }
+  }
 
-function augment( receivingClass, givingClass ) {
- 
-    if ( arguments[2] ) {
-        for ( var i = 2, len = arguments.length; i < len; i++ ) {
-            receivingClass.prototype[arguments[i]] = givingClass.prototype[arguments[i]];
-        }
-    }
-    else {
-        for ( var methodName in givingClass.prototype ) {
-            if ( !Object.hasOwnProperty.call(receivingClass.prototype, methodName) ) {
-                receivingClass.prototype[methodName] = givingClass.prototype[methodName];
-            }
-        }
-    }
-}
-  augment(Movie, Social);
+  extend(Movie.prototype, Social.prototype);
 
   Movie.noConflict = function noConflict() {
     global.Movie = previousMovie;

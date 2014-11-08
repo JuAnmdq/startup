@@ -1,24 +1,14 @@
 !function(global) {
   'use strict';
 
-(function($) {
-  var o = $({});
-  $.subscribe = function() {
-  o.on.apply(o, arguments);
-  };
-  $.unsubscribe = function() {
-  o.off.apply(o, arguments);
-  };
-  $.publish = function() {
-  o.trigger.apply(o, arguments);
-  };
-}(jQuery));
-
 var previousMovieObserver = global.MovieObserver;
 
 var MovieObserver = function MovieObserver() {
-  $.subscribe('play', function(data) {
+  $.subscribe('play', function(e, data) {
   	console.log('Playing ' + data);
+  });
+  $.subscribe('stop', function(e, data) {
+  	console.log(data + ' has stopped.')
   });
 }
 
@@ -34,19 +24,6 @@ MovieObserver.noConflict = function noConflict() {
 }
   global.MovieObserver = MovieObserver;
 }(this);
-
-
-
-
-//var event = new Event('playing');
-
-//$.suscribe('playing', this, function() {
-  
-/*movieObserver.prototype.constructor = movieObserver;
-
-*/
-  
-
 
 
 
