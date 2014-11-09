@@ -1,4 +1,4 @@
-define(['director/director'], function(Director) {
+define(['director'], function(Director) {
   var Movie = function Movie() {
 
     this.director;

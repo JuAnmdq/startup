@@ -2,6 +2,8 @@ require.config( {
     baseUrl: "scripts",
     paths: {
 	  jquery: "jquery-2.1.1.min",
+	  movie: "movie/movie",
+	  director: "director/director"
     },
 	shim: {
 	  jquery: "$"
