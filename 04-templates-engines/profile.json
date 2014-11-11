@@ -1,0 +1,25 @@
+{
+	"title": "Profile",
+	"imgProfile": "images/star-wars-episode-7-peter-mayhew-chewbacca.jpg",
+  	"firstName": "Chew",
+  	"lastName": "Bacca",
+  	"profession": "Photoshop's designer",
+  	"currentJob": "Freelance",
+  	"recommendation": "Ubisoft",
+  	"education": "Barchar College",
+  	"experience": [
+  	  {"workedIn": "Trade Ship"},
+  	  {"workedIn": "Melmac company"},
+  	  {"workedIn": "Astro development"}
+  	],
+  	"languages": [
+  	  {"language": "english"}, 
+  	  {"language": "italian"}, 
+  	  {"language": "spanish"}
+  	],
+  	"contact": {
+  	  "email": "peoplechewb@hotmail.com",
+  	  "twitter": "@chewbacca",
+  	  "skype": "space.chew"
+  	}
+}

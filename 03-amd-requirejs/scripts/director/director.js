@@ -1,4 +1,4 @@
-define(function() {
+	define(function() {
 
   var Director = function Director(name) {
 

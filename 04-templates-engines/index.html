@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Topic 4</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+	<script src="libs/handlebars-v2.0.0.js"></script>
+	<script src="libs/underscore-min.js"></script>
+	<script type="text/javascript" src="libs/dust-full-0.3.0.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <div class="body-content">
+    <div id="content-handlebars"></div>
+    <div id="content-underscore"></div>
+    <div id="content-dust"></div>
+  </div>
+  <script id="src-handlebars" type="text/x-handlebars-template">
+  	<div class="title">
+  	  <h1>{{title}}</h1>
+  	</div>
+  	<div class="cont-img-profile">
+  	  <img class="img-profile" src={{imgProfile}} alt="" />
+  	</div>
+  	<div class="profile">
+  	  <ul>
+  	    <li>First name: {{firstName}}</li>
+  		<li>Last name: {{lastName}}</li>
+  		<li>Profession: {{profession}}</li>
+  		<li>Current job: {{currentJob}}</li>
+  		<li>Recommendation: {{recommendation}}</li>
+  		<li>Education: {{education}}</li>
+  		<li>Experience:
+  		  <ul>
+  		    {{#experience}}<li>{{workedIn}}</li>{{/experience}}
+  		  </ul>
+  		</li>
+  		<li>Spoken languages: 
+  		  <ul>
+  		  	{{#languages}}<li>{{language}}</li>{{/languages}}
+  		  </ul>
+  		</li>
+  		<li>Contact: 
+  		  <ul> 
+  		    <li>Email: {{contact.email}}</li>
+  		    <li>Twitter: {{contact.twitter}}</li>
+  		    <li>Skype: {{contact.skype}}</li>
+  		  </ul>
+  		</li>
+  	</div>
+  </script>
+
+  <script id="src-underscore" type="text/template">
+    <div class="title">
+  	  <h1><%= title %> </h1>
+  	</div>
+  	<div class="cont-img-profile">
+  	  <img class="img-profile" src=<%= imgProfile %> alt="" />
+  	</div>
+  	<div class="profile">
+  	  <ul>
+  	    <li>First name: <%=firstName%></li>
+  		<li>Last name: <%=lastName%></li>
+  		<li>Profession: <%=profession%></li>
+  		<li>Current job: <%=currentJob%></li>
+  		<li>Recommendation: <%=recommendation%></li>
+  		<li>Education: <%=education%></li>
+  		<li>Experience:
+  		  <ul>
+  		    <% _.each(experience, function(data) { %> <li><%= data.workedIn %><li> <% }); %>
+  		  </ul>
+  		</li>
+  		<li>Spoken languages: 
+  		  <ul>
+  		  	<% _.each(languages, function(data) { %> <li><%= data.language %><li> <% }); %>
+  		  </ul>
+  		</li>
+  		<li>Contact: 
+  		  <ul> 
+  		    <li>Email: <%=contact.email%></li>
+  		    <li>Twitter: <%=contact.twitter%></li>
+  		    <li>Skype: <%=contact.skype%></li>
+  		  </ul>
+  		</li>
+  	</div>
+  </script>
+
+  <script id="src-dust" type="text/template">
+    <div class="title">
+  	  <h1>{title}</h1>
+  	</div>
+  	<div class="cont-img-profile">
+  	  <img class="img-profile" src={imgProfile} alt="" />
+  	</div>
+  	<div class="profile">
+  	  <ul>
+  	    <li>First name: {firstName}</li>
+  		<li>Last name: {lastName}</li>
+  		<li>Profession: {profession}</li>
+  		<li>Current job: {currentJob}</li>
+  		<li>Recommendation: {recommendation}</li>
+  		<li>Education: {education}</li>
+  		<li>Experience:
+  		  <ul>
+  		    {#experience}<li>{workedIn}</li>{/experience}
+  		  </ul>
+  		</li>
+  		<li>Spoken languages: 
+  		  <ul>
+  		  	{#languages}<li>{language}</li>{/languages}
+  		  </ul>
+  		</li>
+  		<li>Contact: 
+  		  <ul> 
+  		    <li>Email: {contact.email}</li>
+  		    <li>Twitter: {contact.twitter}</li>
+  		    <li>Skype: {contact.skype}</li>
+  		  </ul>
+  		</li>
+  	</div>
+  </script>
+</body>	
+</html>

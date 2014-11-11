@@ -1,0 +1,32 @@
+body {
+  margin-top: 3em;
+  background-color: #eaf2f2;
+}
+
+.body-content {
+  margin: 0px auto;
+  width: 90%;
+}
+
+.img-profile {
+  margin-bottom: 1em;
+  width: 10em;
+  height: 10em;
+  border-radius: 0.2em;
+}
+
+.profile {
+  width: 35%;
+  border-radius: 1em;
+  padding: 0.5em 2em 0.5em 0.5em;
+
+  background-color: #eae1e1;
+  font-family: Helvetica, Arial;
+  font-size: 1em;
+}
+
+.title {
+  padding-left: 0.5em;
+  border-radius: 0.5em;
+  background-color: #f4d092;
+}
