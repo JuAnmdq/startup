@@ -1,0 +1,38 @@
+body {
+  background-color: #e0e0e0;
+}
+
+input {
+  margin-bottom: 1em;
+}
+
+.body {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.btnMod {
+  margin-left: 1.5em;
+}
+
+.details {
+  padding: 0.5em;
+  border-radius: 1em;
+  background-color: #add339;
+}
+
+.img-test {
+  width: 250px;
+  height: 250px;
+}
+
+.movie-data {
+  margin: 1.5em;
+  width: 25em;
+  height: auto;
+  padding: 0.5em;
+
+  border-radius: 1em;	
+  background-color: #f4f9e5;
+
+}

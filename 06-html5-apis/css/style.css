@@ -1,0 +1,19 @@
+body {
+  margin-left: 2em;
+  background-color: #e0dede;
+}
+
+.btn {
+  width: 6em;
+  height: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  background-color: #28b7ef;
+  color: #FFF;
+}
+
+.content-exc {
+  color: red;
+}
+

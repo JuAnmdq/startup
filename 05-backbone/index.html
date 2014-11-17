@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Topic 5</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script data-main="js/main" src="js/libs/require.js"></script>
+</head>
+<body>
+  <div class="body">
+      <h1>Topic 5</h1>
+      <input id="title" type="text" placeholder="Title"/>
+      <input id="genre" type="text" placeholder="Genre"/>
+      <input id="director" type="text" placeholder="Director"/>
+      <input id="details" type="text" placeholder="Details">
+  	  <button id="btnAdd">Add movie</button>
+      <button id="btnClearAll">Clear all</button><br>
+      <script id="src-underscore" type="text/template">
+        <div class="movie-data">
+          <p>Title: <%= title %></p>
+          <p>Genre: <%= genre %></p>
+          <p>Director: <%= director %></p>
+          <div id="details-data" class="details">
+          <p>Details: <%= details %></p>
+        </div>
+        </div>
+      </script> 
+      <script id="src-details" type="text/template">
+      </script>
+    </div>
+</body>
+</html>

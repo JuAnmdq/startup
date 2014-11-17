@@ -18,9 +18,10 @@ require(['jquery', 'movie', 'director'], function($, Movie, Director) {
 
 	  	ridleyScott = new Director('Ridley Scott');
   		alien.set('director', ridleyScott);
- 		ridleyScott.set('quotes', ['Cast is everything', ' Do what...']);
+ 		  ridleyScott.set('quotes', ['Cast is everything', ' Do what...']);
 
-  		console.log(alien.get('director').speak());
+      $('#content-quotes').html(alien.get('director').speak());
+      $('#content-quotes').show('slow');
  	 });
   });
 });
